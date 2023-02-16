@@ -1,0 +1,91 @@
+body {
+  background-color: ghostwhite;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  padding: 30px 20px;
+  background: radial-gradient(circle at 50% 0%, purple 40%, #ffff 36%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+}
+
+.card img {
+  position: relative;
+  display: block;
+  width: 180px;
+  max-height: 200px;
+  margin: 30px auto;
+}
+
+.hp {
+  width: 80px;
+  margin-left: auto;
+  margin-top: 0;
+  padding: 8px 0;
+  background-color: #ffff;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: 400;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.pokemon-name {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.types {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 40px 0;
+}
+
+.hp span,
+.types span {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.generate {
+  position: relative;
+  display: block;
+  padding: 15px 60px;
+  font-size: 18px;
+  background-color: black;
+  color: #ffff;
+  margin: 30px auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
