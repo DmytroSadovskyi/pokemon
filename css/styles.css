@@ -24,7 +24,6 @@ p {
   position: relative;
   width: 100%;
   padding: 30px 20px;
-  background: radial-gradient(circle at 50% 0%, purple 40%, #ffff 36%);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
 }
@@ -69,6 +68,17 @@ h2 {
   font-size: 12px;
   letter-spacing: 0.4px;
   font-weight: 600;
+}
+
+.types span {
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #ffff;
+  cursor: pointer;
+}
+
+.types span:hover {
+  transform: scale(1.1);
 }
 
 .stats {
