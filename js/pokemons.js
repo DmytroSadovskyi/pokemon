@@ -33,26 +33,34 @@ const getPokemonData = () => {
 };
 
 const generateCard = (data) => {
+
+    const hpValue = data.stats[0].base_stat;
+    const pokemonImage = data.sprites.other.dream_world.front_default;
+    const pokemonName = data.name[0].toUpperCase() + data.name.slice(1);
+    const attackValue = data.stats[1].base_stat;
+    const defenceValue = data.stats[2].base_stat;
+    const speedValue = data.stats[5].base_stat;
+
     const themeColor = typeColor[data.types[0].type.name];
     card.innerHTML =
 
-        ` <p class="hp"><span>HP</span> ${data.stats[0].base_stat}</p>
-            <img src="${data.sprites.other.dream_world.front_default}" alt="${data.name} image">
-            <h1 class="pokemon-name">${data.name}</h1>
+        ` <p class="hp"><span>HP</span> ${hpValue}</p>
+            <img src="${pokemonImage}" alt="${pokemonName} image">
+            <h1 class="pokemon-name">${pokemonName}</h1>
             <div class="types">
             
             </div>
             <div class="stats">
                 <div>
-                    <h2>${data.stats[1].base_stat}</h2>
+                    <h2>${attackValue}</h2>
                     <p>Attack</p>
                 </div>
                 <div>
-                    <h2>${data.stats[2].base_stat}</h2>
+                    <h2>${defenceValue}</h2>
                     <p>Defense</p>
                 </div>
                 <div>
-                    <h2>${data.stats[5].base_stat}</h2>
+                    <h2>${speedValue}</h2>
                     <p>Speed</p>
                 </div> `;
     appendTypes(data.types);
