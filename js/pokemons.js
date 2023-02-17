@@ -33,7 +33,7 @@ const getPokemonData = () => {
 };
 
 const generateCard = (data) => {
-
+    const xpValue = data.base_experience;
     const hpValue = data.stats[0].base_stat;
     const pokemonImage = data.sprites.other.dream_world.front_default;
     const pokemonName = data.name[0].toUpperCase() + data.name.slice(1);
@@ -44,7 +44,10 @@ const generateCard = (data) => {
     const themeColor = typeColor[data.types[0].type.name];
     card.innerHTML =
 
-        ` <p class="hp"><span>HP</span> ${hpValue}</p>
+        ` 
+        <div class = 'stats'><p class="hp"><span>HP</span> ${hpValue}</p>
+          <p class="xp"><span>XP</span> ${xpValue}</p></div>
+          
             <img src="${pokemonImage}" alt="${pokemonName} image">
             <h1 class="pokemon-name">${pokemonName}</h1>
             <div class="types">
